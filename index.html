@@ -1,40 +1,1490 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth ugrczq apinrjgk" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <title>RI Shawon — Data Analyst</title>
-    <meta
-      name="description"
-      content="Rakibul Islam Shawon’s data analyst portfolio. Explore SQL, Python, Power BI, and data visualization case studies."
-    />
-    <meta name="author" content="Rakibul Islam Shawon" />
-
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <meta property="og:title" content="Rakibul Islam Shawon — Data Analyst" />
-    <meta name="twitter:title" content="Rakibul Islam Shawon — Data Analyst" />
-    <meta
-      property="og:description"
-      content="Rakibul Islam Shawon’s data analyst portfolio. Explore SQL, Python, Power BI, and data visualization case studies."
-    />
-    <meta
-      name="twitter:description"
-      content="Rakibul Islam Shawon’s data analyst portfolio. Explore SQL, Python, Power BI, and data visualization case studies."
-    />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Rakibul Islam Shawon — Data Analyst / Problem Solver</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Custom Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                bg: "#080B0C",
+                surface: "#0E1315",
+                surfaceAlt: "#141A1D",
+                border: "#1F292E",
+                borderLight: "#2A363D",
+                accent: "#34D399",
+                accentLight: "#6EE7B7",
+                accentDark: "#059669",
+                muted: "#7E8C94",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+              mono: ["JetBrains Mono", "Fira Code", "Courier New", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <style data-purpose="custom-utilities">
+      /* Subtle custom glowing effects and typography enhancements */
+      .glow-mint {
+        box-shadow: 0 0 25px -4px rgba(52, 211, 153, 0.25);
+      }
+      .text-glow {
+        text-shadow: 0 0 16px rgba(52, 211, 153, 0.35);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #080b0c;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #1f292e;
+        border-radius: 9999px;
+      }
+      html {
+        scroll-padding-top: 5rem;
+      }
+      body {
+        width: 100%;
+        min-width: 0;
+      }
+    </style>
   </head>
+  <body
+    class="bg-[#080B0C] text-neutral-200 font-sans antialiased selection:bg-brand-accent selection:text-black min-h-screen custom-scrollbar"
+  >
+    <!-- BEGIN: MainHeader -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-[#080B0C]/85 backdrop-blur-md border-b border-[#1A2226]"
+      data-purpose="site-header"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between"
+      >
+        <!-- Logo Branding -->
+        <a
+          class="flex items-center gap-3 group"
+          data-purpose="brand-logo"
+          href="#"
+        >
+          <div
+            class="w-8 h-8 rounded-lg border border-brand-accent/50 bg-[#0E1517] flex items-center justify-center text-brand-accent font-semibold text-sm group-hover:border-brand-accent transition-colors"
+          >
+            s
+          </div>
+          <span
+            class="font-medium text-lg tracking-tight text-white group-hover:text-brand-accent transition-colors"
+            >shawon.</span
+          >
+        </a>
+        <!-- Center Navigation -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm"
+          data-purpose="desktop-nav"
+        >
+          <a class="text-white font-medium relative py-1" href="#hero">
+            Home
+            <span
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-brand-accent"
+            ></span>
+          </a>
+          <a
+            class="text-[#88969E] hover:text-white transition-colors"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="text-[#88969E] hover:text-white transition-colors"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="text-[#88969E] hover:text-white transition-colors"
+            href="#toolkit"
+            >Skills</a
+          >
+          <a
+            class="text-[#88969E] hover:text-white transition-colors"
+            href="#contact"
+            >Contact</a
+          >
+        </nav>
+        <!-- Right Nav Actions -->
+        <div
+          class="flex items-center gap-2 sm:gap-4"
+          data-purpose="header-actions"
+        >
+          <button
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+            class="md:hidden p-2 text-[#88969E] hover:text-white transition-colors"
+            data-purpose="mobile-menu-toggle"
+            type="button"
+          >
+            <span aria-hidden="true" class="text-xl leading-none">☰</span>
+          </button>
+          <!-- Sun/Theme Icon -->
+          <button
+            aria-label="Toggle theme"
+            class="hidden sm:block p-2 text-[#88969E] hover:text-white transition-colors"
+            type="button"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="5" stroke-width="1.75"></circle>
+              <path
+                d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.75"
+              ></path>
+            </svg>
+          </button>
+          <!-- CTA Button -->
+          <a
+            class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full text-xs font-medium bg-[#A7F3D0] text-[#062419] hover:bg-[#6EE7B7] transition-all"
+            href="#contact"
+          >
+            Let's talk <span class="text-sm">↗</span>
+          </a>
+        </div>
+      </div>
+      <nav
+        aria-label="Mobile navigation"
+        class="hidden md:hidden border-t border-[#1A2226] bg-[#080B0C]/95 px-4 py-3"
+        data-purpose="mobile-nav"
+        id="mobile-nav"
+      >
+        <a class="block py-2 text-sm text-white" href="#hero">Home</a>
+        <a
+          class="block py-2 text-sm text-[#88969E] hover:text-white"
+          href="#about"
+          >About</a
+        >
+        <a
+          class="block py-2 text-sm text-[#88969E] hover:text-white"
+          href="#projects"
+          >Projects</a
+        >
+        <a
+          class="block py-2 text-sm text-[#88969E] hover:text-white"
+          href="#toolkit"
+          >Skills</a
+        >
+        <a
+          class="block py-2 text-sm text-[#88969E] hover:text-white"
+          href="#contact"
+          >Contact</a
+        >
+      </nav>
+    </header>
+    <!-- END: MainHeader -->
+    <main class="relative pt-20">
+      <!-- BEGIN: HeroSection -->
+      <section
+        class="relative flex min-h-[calc(100vh-5rem)] flex-col justify-between overflow-hidden border-b border-[#1A2226]"
+        style="min-height: calc(100svh - 5rem)"
+        data-purpose="hero-section"
+        id="hero"
+      >
+        <!-- 3D Mesh Wireframe Background (SVG) -->
+        <div
+          class="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden"
+          data-purpose="topographic-wireframe"
+        >
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsjvmI2UOCxdWS60mc_-dv5AJNwvGcz5fDaHOUy1NRGiOuIAKda93SjuVZYnRUX8U3UxQIDMGXKjUEgYa30CSu5QrOhJxqvklirz1CQKrPM5rR_tJUHlxGGUpbLMzDNPETEyrqrDxDUbQSFXUvQb2MiFFnHfu54K3OaptYnPj5yb3NW5od6kt01fYaqNihqm8MBR1uX90d-Ca27d1AJkHFF3UKhzModMeCwi0Syp-kRFvgwxxdDgCqNzernVqQcIMl6q0"
+            alt="Data landscape"
+            class="absolute inset-0 w-full h-full object-cover object-right opacity-40 mix-blend-screen"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#080B0C] via-[#080B0C]/80 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-[#080B0C] via-transparent to-[#080B0C]"
+          ></div>
+        </div>
+        <!-- Hero Main Content -->
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-6 pt-16 lg:pt-24 pb-12 w-full flex-grow flex flex-col justify-center"
+        >
+          <!-- Top Status Pill -->
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#232F34] bg-[#0E1417]/80 backdrop-blur-sm text-[11px] font-mono tracking-wider text-neutral-300 uppercase mb-8 w-fit"
+            data-purpose="status-badge"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-brand-accent animate-ping"
+            ></span>
+            <span class="">OPEN TO OPPORTUNITIES</span>
+          </div>
+          <!-- Greeting & Name -->
+          <div class="max-w-3xl">
+            <p class="text-neutral-400 text-lg mb-2 font-light">Hello, I'm</p>
+            <h1
+              class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
+            >
+              Rakibul Islam <br class="hidden sm:inline" />Shawon<span
+                class="text-brand-accent"
+                >.</span
+              >
+            </h1>
+            <!-- Role -->
+            <div
+              class="flex flex-wrap items-center gap-x-3 gap-y-2 text-neutral-300 font-medium text-base sm:text-lg mb-6"
+            >
+              <span class="w-5 h-[1.5px] bg-brand-accent"></span>
+              <span class="">Data Analyst</span>
+              <span class="text-neutral-600">/</span>
+              <span class="">Problem Solver</span>
+            </div>
+            <!-- Bio -->
+            <p
+              class="text-neutral-400 text-base sm:text-lg leading-relaxed max-w-xl mb-10 font-normal"
+            >
+              I turn complex data into clear insights. Connecting the dots
+              between numbers and better business decisions.
+            </p>
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4">
+              <a
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#34D399] text-[#081F17] font-semibold text-sm hover:bg-[#6EE7B7] transition-all duration-200"
+                href="#projects"
+              >
+                Explore my work <span class="text-base leading-none">↗</span>
+              </a>
+              <a
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-[#232F34] bg-[#0D1215] text-neutral-300 hover:text-white hover:border-[#384852] font-medium text-sm transition-all duration-200"
+                href="#"
+              >
+                <svg
+                  class="w-4 h-4 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+                Profile résumé
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Hero Footer Status Bar -->
+        <div
+          class="relative z-10 border-t border-[#161D21] py-4 bg-[#080B0C]/60 backdrop-blur-sm"
+          data-purpose="hero-footer-bar"
+        >
+          <div
+            class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-mono gap-4"
+          >
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="">📍 Based in Bangladesh</span>
+              <span class="text-neutral-700">•</span>
+              <span class="text-neutral-600">sample profile</span>
+            </div>
+            <div
+              class="flex items-center gap-2 tracking-widest uppercase text-[11px] text-neutral-400"
+            >
+              <span class="">SCROLL TO EXPLORE</span>
+              <span class="text-brand-accent">↓</span>
+            </div>
+            <div class="font-mono text-neutral-500">
+              23.8103° N • 90.4125° E
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: HeroSection -->
+      <!-- BEGIN: TechStackStrip -->
+      <section
+        class="border-b border-[#1A2226] py-10 bg-[#0A0E10]"
+        data-purpose="tech-stack-bar"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between gap-6"
+          >
+            <div
+              class="text-[10px] uppercase font-mono tracking-widest text-neutral-500 max-w-[130px] leading-tight"
+            >
+              THE TOOLS BEHIND THE INSIGHTS
+            </div>
+            <div class="flex flex-wrap items-center gap-8 md:gap-14">
+              <!-- SQL -->
+              <div
+                class="flex items-center gap-2.5 text-neutral-300 hover:text-white transition-colors"
+              >
+                <svg
+                  class="w-5 h-5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <ellipse
+                    cx="12"
+                    cy="5"
+                    rx="9"
+                    ry="3"
+                    stroke-width="1.75"
+                  ></ellipse>
+                  <path
+                    d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"
+                    stroke-width="1.75"
+                  ></path>
+                  <path
+                    d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"
+                    stroke-width="1.75"
+                  ></path>
+                </svg>
+                <span class="text-sm font-medium">SQL</span>
+              </div>
+              <!-- Python -->
+              <div
+                class="flex items-center gap-2.5 text-neutral-300 hover:text-white transition-colors"
+              >
+                <span class="font-mono text-base font-bold text-neutral-400"
+                  >&lt;/&gt;</span
+                >
+                <span class="text-sm font-medium">Python</span>
+              </div>
+              <!-- Power BI -->
+              <div
+                class="flex items-center gap-2.5 text-neutral-300 hover:text-white transition-colors"
+              >
+                <svg
+                  class="w-5 h-5 text-neutral-400"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 14h2v7H5v-7zm6-6h2v13h-2V8zm6-4h2v17h-2V4z"
+                  ></path>
+                </svg>
+                <span class="text-sm font-medium">Power BI</span>
+              </div>
+              <!-- Tableau -->
+              <div
+                class="flex items-center gap-2.5 text-neutral-300 hover:text-white transition-colors"
+              >
+                <svg
+                  class="w-5 h-5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2v20M2 12h20M6 7l12 10M18 7L6 17"
+                    stroke-linecap="round"
+                    stroke-width="1.75"
+                  ></path>
+                </svg>
+                <span class="text-sm font-medium">Tableau</span>
+              </div>
+              <!-- Excel -->
+              <div
+                class="flex items-center gap-2.5 text-neutral-300 hover:text-white transition-colors"
+              >
+                <svg
+                  class="w-5 h-5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <rect
+                    height="18"
+                    rx="2"
+                    stroke-width="1.75"
+                    width="18"
+                    x="3"
+                    y="3"
+                  ></rect>
+                  <path d="M9 3v18M3 9h18M3 15h18" stroke-width="1.25"></path>
+                </svg>
+                <span class="text-sm font-medium">Excel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: TechStackStrip -->
+      <!-- BEGIN: Section01SelectedWork -->
+      <section
+        class="py-16 sm:py-24 border-b border-[#1A2226]"
+        data-purpose="selected-work-section"
+        id="projects"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Section Indicator -->
+          <div class="text-xs font-mono tracking-widest text-neutral-500 mb-3">
+            01 SELECTED WORK
+          </div>
+          <!-- Section Title & Subtitle -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10"
+          >
+            <h2
+              class="text-3xl sm:text-4xl font-semibold text-white tracking-tight"
+            >
+              Data. Insight.
+              <span class="text-neutral-400 font-light">Impact.</span>
+            </h2>
+            <p class="text-neutral-400 text-sm max-w-sm">
+              A selection of analytical explorations. Real-world questions,
+              data-driven answers.
+            </p>
+          </div>
+          <!-- Filter Tabs & Label -->
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 pb-8 mb-10 border-b border-[#172024]"
+          >
+            <div class="flex flex-wrap items-center gap-2">
+              <button
+                class="px-3.5 py-1.5 rounded-md bg-[#131B1E] border border-[#232F35] text-xs font-medium text-white flex items-center gap-2"
+                type="button"
+              >
+                All projects
+                <span class="text-[10px] text-neutral-400 font-mono">03</span>
+              </button>
+              <button
+                class="px-3.5 py-1.5 rounded-md hover:bg-[#131B1E] text-xs font-medium text-neutral-400 hover:text-white transition-colors"
+                type="button"
+              >
+                Power BI
+              </button>
+              <button
+                class="px-3.5 py-1.5 rounded-md hover:bg-[#131B1E] text-xs font-medium text-neutral-400 hover:text-white transition-colors"
+                type="button"
+              >
+                Python
+              </button>
+              <button
+                class="px-3.5 py-1.5 rounded-md hover:bg-[#131B1E] text-xs font-medium text-neutral-400 hover:text-white transition-colors"
+                type="button"
+              >
+                SQL
+              </button>
+            </div>
+            <span
+              class="text-[10px] font-mono tracking-widest text-neutral-500 uppercase"
+            >
+              ILLUSTRATIVE CASE STUDIES
+            </span>
+          </div>
+          <!-- 3 Project Cards Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            data-purpose="project-cards-grid"
+          >
+            <!-- Card 1: Retail sales intelligence -->
+            <div
+              class="bg-[#0D1215] border border-[#1E282E] rounded-xl overflow-hidden flex flex-col justify-between group hover:border-[#2F3E47] transition-all duration-300"
+            >
+              <!-- Visual Chart Box -->
+              <div class="p-5 border-b border-[#1A2227] bg-[#0A0F11]">
+                <div
+                  class="flex items-center justify-between text-xs text-neutral-400 mb-2 font-mono"
+                >
+                  <span
+                    class="text-[10px] uppercase tracking-wider text-neutral-400"
+                    >REVENUE OVERVIEW</span
+                  >
+                  <span class="text-brand-accent font-semibold text-[11px]"
+                    >+27.4%</span
+                  >
+                </div>
+                <div class="text-2xl font-bold text-white mb-3">$758k</div>
+                <!-- Embedded SVG Chart -->
+                <div class="h-32 w-full relative">
+                  <svg
+                    class="w-full h-full overflow-visible"
+                    fill="none"
+                    viewBox="0 0 280 100"
+                  >
+                    <!-- Grid horizontal lines -->
+                    <line
+                      stroke="#182329"
+                      stroke-dasharray="2 2"
+                      x1="0"
+                      x2="280"
+                      y1="20"
+                      y2="20"
+                    ></line>
+                    <line
+                      stroke="#182329"
+                      stroke-dasharray="2 2"
+                      x1="0"
+                      x2="280"
+                      y1="50"
+                      y2="50"
+                    ></line>
+                    <line
+                      stroke="#182329"
+                      stroke-dasharray="2 2"
+                      x1="0"
+                      x2="280"
+                      y1="80"
+                      y2="80"
+                    ></line>
+                    <!-- Trend Line & Area -->
+                    <defs>
+                      <linearGradient
+                        id="chartGrad1"
+                        x1="0"
+                        x2="0"
+                        y1="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#34D399"
+                          stop-opacity="0.3"
+                        ></stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#34D399"
+                          stop-opacity="0.0"
+                        ></stop>
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M 10 75 Q 50 82, 80 68 T 150 60 T 210 40 T 270 30 L 270 95 L 10 95 Z"
+                      fill="url(#chartGrad1)"
+                    ></path>
+                    <path
+                      d="M 10 75 Q 50 82, 80 68 T 150 60 T 210 40 T 270 30"
+                      fill="none"
+                      stroke="#34D399"
+                      stroke-width="2"
+                    ></path>
+                    <circle
+                      cx="270"
+                      cy="30"
+                      fill="#34D399"
+                      r="3.5"
+                      stroke="#0D1215"
+                      stroke-width="2"
+                    ></circle>
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-between items-center text-[10px] font-mono text-neutral-500 mt-2"
+                >
+                  <span class="">Monthly revenue</span>
+                  <span class="">Sample data</span>
+                </div>
+              </div>
+              <!-- Card Body Content -->
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <!-- Metadata / Tag Pills -->
+                  <div class="flex flex-wrap items-center gap-2 mb-4">
+                    <span class="text-xs font-mono text-neutral-500">/01</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >Power BI</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >SQL</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >DAX</span
+                    >
+                  </div>
+                  <h3
+                    class="text-lg font-semibold text-white mb-2 group-hover:text-brand-accent transition-colors"
+                  >
+                    Retail sales intelligence
+                  </h3>
+                  <p
+                    class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-6"
+                  >
+                    Finding the story behind sales, seasonality, and regional
+                    performance.
+                  </p>
+                </div>
+                <!-- Card Footer Action -->
+                <div
+                  class="pt-4 border-t border-[#182126] flex items-center justify-between text-xs font-medium text-neutral-300 group-hover:text-brand-accent"
+                >
+                  <span class="">View case study</span>
+                  <span class="">↗</span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2: Customer segmentation -->
+            <div
+              class="bg-[#0D1215] border border-[#1E282E] rounded-xl overflow-hidden flex flex-col justify-between group hover:border-[#2F3E47] transition-all duration-300"
+            >
+              <!-- Visual Chart Box -->
+              <div class="p-5 border-b border-[#1A2227] bg-[#0A0F11]">
+                <div
+                  class="flex items-center justify-between text-xs text-neutral-400 mb-2 font-mono"
+                >
+                  <span
+                    class="text-[10px] uppercase tracking-wider text-neutral-400"
+                    >CUSTOMER CLUSTERS</span
+                  >
+                  <span class="text-neutral-500 text-[11px]">↗</span>
+                </div>
+                <div class="text-2xl font-bold text-white mb-3">
+                  3
+                  <span class="text-xs font-normal text-neutral-400 font-mono"
+                    >customer segments</span
+                  >
+                </div>
+                <!-- Embedded SVG Scatter Plot -->
+                <div class="h-32 w-full relative">
+                  <svg class="w-full h-full" fill="none" viewBox="0 0 280 100">
+                    <!-- Grid -->
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="2 2"
+                      x1="10"
+                      x2="270"
+                      y1="20"
+                      y2="20"
+                    ></line>
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="2 2"
+                      x1="10"
+                      x2="270"
+                      y1="50"
+                      y2="50"
+                    ></line>
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="2 2"
+                      x1="10"
+                      x2="270"
+                      y1="80"
+                      y2="80"
+                    ></line>
+                    <!-- Cluster 1: Green/Mint dots -->
+                    <circle cx="35" cy="72" fill="#34D399" r="3.5"></circle>
+                    <circle cx="50" cy="80" fill="#34D399" r="3"></circle>
+                    <circle cx="65" cy="68" fill="#34D399" r="4"></circle>
+                    <circle cx="80" cy="74" fill="#34D399" r="3.5"></circle>
+                    <!-- Cluster 2: Orange/Amber dots -->
+                    <circle cx="115" cy="60" fill="#F59E0B" r="4"></circle>
+                    <circle cx="130" cy="50" fill="#F59E0B" r="3.5"></circle>
+                    <circle cx="145" cy="52" fill="#F59E0B" r="4"></circle>
+                    <circle cx="158" cy="45" fill="#F59E0B" r="3"></circle>
+                    <!-- Cluster 3: Cyan/Blue dots -->
+                    <circle cx="190" cy="38" fill="#38BDF8" r="3.5"></circle>
+                    <circle cx="205" cy="32" fill="#38BDF8" r="4.5"></circle>
+                    <circle cx="225" cy="34" fill="#38BDF8" r="4"></circle>
+                    <circle cx="240" cy="40" fill="#38BDF8" r="3.5"></circle>
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-between items-center text-[10px] font-mono text-neutral-500 mt-2"
+                >
+                  <span class="">Frequency × customer value</span>
+                  <span class="">Sample data</span>
+                </div>
+              </div>
+              <!-- Card Body Content -->
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <!-- Metadata / Tag Pills -->
+                  <div class="flex flex-wrap items-center gap-2 mb-4">
+                    <span class="text-xs font-mono text-neutral-500">/02</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >Python</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >Pandas</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >Scikit-learn</span
+                    >
+                  </div>
+                  <h3
+                    class="text-lg font-semibold text-white mb-2 group-hover:text-brand-accent transition-colors"
+                  >
+                    Customer segmentation
+                  </h3>
+                  <p
+                    class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-6"
+                  >
+                    Turning purchase patterns into meaningful customer groups.
+                  </p>
+                </div>
+                <!-- Card Footer Action -->
+                <div
+                  class="pt-4 border-t border-[#182126] flex items-center justify-between text-xs font-medium text-neutral-300 group-hover:text-brand-accent"
+                >
+                  <span class="">View case study</span>
+                  <span class="">↗</span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: Supply chain performance -->
+            <div
+              class="bg-[#0D1215] border border-[#1E282E] rounded-xl overflow-hidden flex flex-col justify-between group hover:border-[#2F3E47] transition-all duration-300"
+            >
+              <!-- Visual Chart Box -->
+              <div class="p-5 border-b border-[#1A2227] bg-[#0A0F11]">
+                <div
+                  class="flex items-center justify-between text-xs text-neutral-400 mb-2 font-mono"
+                >
+                  <span
+                    class="text-[10px] uppercase tracking-wider text-neutral-400"
+                    >DELIVERY PERFORMANCE</span
+                  >
+                  <span class="text-neutral-500 text-[11px]">↗</span>
+                </div>
+                <div class="text-2xl font-bold text-white mb-3">
+                  84.6%
+                  <span class="text-xs font-normal text-neutral-400 font-mono"
+                    >on-time deliveries</span
+                  >
+                </div>
+                <!-- Embedded SVG Bar Chart -->
+                <div class="h-32 w-full relative">
+                  <svg class="w-full h-full" fill="none" viewBox="0 0 280 100">
+                    <!-- Grid -->
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="2 2"
+                      x1="10"
+                      x2="270"
+                      y1="20"
+                      y2="20"
+                    ></line>
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="2 2"
+                      x1="10"
+                      x2="270"
+                      y1="50"
+                      y2="50"
+                    ></line>
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="2 2"
+                      x1="10"
+                      x2="270"
+                      y1="80"
+                      y2="80"
+                    ></line>
+                    <!-- Double bars per region (North, South, East, West, Central) -->
+                    <!-- North -->
+                    <rect
+                      fill="#2DD4BF"
+                      height="48"
+                      opacity="0.85"
+                      rx="2"
+                      width="9"
+                      x="25"
+                      y="42"
+                    ></rect>
+                    <rect
+                      fill="#34D399"
+                      height="60"
+                      rx="2"
+                      width="9"
+                      x="37"
+                      y="30"
+                    ></rect>
+                    <!-- South -->
+                    <rect
+                      fill="#2DD4BF"
+                      height="42"
+                      opacity="0.85"
+                      rx="2"
+                      width="9"
+                      x="75"
+                      y="48"
+                    ></rect>
+                    <rect
+                      fill="#34D399"
+                      height="55"
+                      rx="2"
+                      width="9"
+                      x="87"
+                      y="35"
+                    ></rect>
+                    <!-- East -->
+                    <rect
+                      fill="#2DD4BF"
+                      height="58"
+                      opacity="0.85"
+                      rx="2"
+                      width="9"
+                      x="125"
+                      y="32"
+                    ></rect>
+                    <rect
+                      fill="#34D399"
+                      height="50"
+                      rx="2"
+                      width="9"
+                      x="137"
+                      y="40"
+                    ></rect>
+                    <!-- West -->
+                    <rect
+                      fill="#2DD4BF"
+                      height="52"
+                      opacity="0.85"
+                      rx="2"
+                      width="9"
+                      x="175"
+                      y="38"
+                    ></rect>
+                    <rect
+                      fill="#34D399"
+                      height="62"
+                      rx="2"
+                      width="9"
+                      x="187"
+                      y="28"
+                    ></rect>
+                    <!-- Central -->
+                    <rect
+                      fill="#2DD4BF"
+                      height="55"
+                      opacity="0.85"
+                      rx="2"
+                      width="9"
+                      x="225"
+                      y="35"
+                    ></rect>
+                    <rect
+                      fill="#34D399"
+                      height="60"
+                      rx="2"
+                      width="9"
+                      x="237"
+                      y="30"
+                    ></rect>
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-between items-center text-[10px] font-mono text-neutral-500 mt-2"
+                >
+                  <span class="">Regional performance</span>
+                  <span class="">Sample data</span>
+                </div>
+              </div>
+              <!-- Card Body Content -->
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <!-- Metadata / Tag Pills -->
+                  <div class="flex flex-wrap items-center gap-2 mb-4">
+                    <span class="text-xs font-mono text-neutral-500">/03</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >SQL</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >Excel</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#141C20] text-neutral-300 border border-[#212E35]"
+                      >Tableau</span
+                    >
+                  </div>
+                  <h3
+                    class="text-lg font-semibold text-white mb-2 group-hover:text-brand-accent transition-colors"
+                  >
+                    Supply chain performance
+                  </h3>
+                  <p
+                    class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-6"
+                  >
+                    Making delivery bottlenecks and operational trends visible.
+                  </p>
+                </div>
+                <!-- Card Footer Action -->
+                <div
+                  class="pt-4 border-t border-[#182126] flex items-center justify-between text-xs font-medium text-neutral-300 group-hover:text-brand-accent"
+                >
+                  <span class="">View case study</span>
+                  <span class="">↗</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Section01SelectedWork -->
+      <!-- BEGIN: Section02AboutMe -->
+      <section
+        class="py-16 sm:py-24 border-b border-[#1A2226]"
+        data-purpose="about-me-section"
+        id="about"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-xs font-mono tracking-widest text-neutral-500 mb-6">
+            02 A LITTLE ABOUT ME
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+          >
+            <!-- Left Column -->
+            <div class="lg:col-span-5">
+              <h2
+                class="text-3xl sm:text-4xl font-semibold text-white tracking-tight leading-snug mb-8"
+              >
+                Curious by nature.<br />
+                <span class="text-neutral-400 font-light"
+                  >Analytical by practice.</span
+                >
+              </h2>
+              <a
+                class="inline-flex items-center gap-2 font-mono italic text-sm text-neutral-300 hover:text-brand-accent transition-colors"
+                href="#"
+              >
+                <span class="">Rakibul I. Shawon</span>
+                <span class="">↗</span>
+              </a>
+            </div>
+            <!-- Right Column -->
+            <div
+              class="lg:col-span-7 space-y-6 text-neutral-300 text-base sm:text-lg leading-relaxed font-normal"
+            >
+              <p class="">
+                I'm Rakibul Islam Shawon, a data analyst who enjoys uncovering
+                patterns, asking better questions, and making the complex feel
+                simple.
+              </p>
+              <p class="text-neutral-400">
+                My focus is on the whole journey: from cleaning messy datasets
+                and exploring the details to building thoughtful dashboards that
+                bring the bigger picture into view.
+              </p>
+              <div
+                class="pt-2 text-brand-accent font-medium flex items-center gap-2 text-base"
+              >
+                <span class="">↳</span>
+                <span class="">Less guesswork. More clarity.</span>
+              </div>
+              <p class="text-xs font-mono text-neutral-500 pt-4">
+                Sample biography · experience and credentials to be added.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Section02AboutMe -->
+      <!-- BEGIN: Section03Toolkit -->
+      <section
+        class="py-16 sm:py-24 border-b border-[#1A2226]"
+        data-purpose="toolkit-section"
+        id="toolkit"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-xs font-mono tracking-widest text-neutral-500 mb-3">
+            03 MY TOOLKIT
+          </div>
+          <div
+            class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12"
+          >
+            <h2
+              class="text-3xl sm:text-4xl font-semibold text-white tracking-tight"
+            >
+              The right tools.<br />
+              <span class="text-neutral-400 font-light"
+                >The right questions.</span
+              >
+            </h2>
+            <p class="text-neutral-400 text-sm max-w-sm">
+              From raw data to a clear narrative, a toolkit built for every
+              step.
+            </p>
+          </div>
+          <!-- 3 Pillars Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Pillar 1 -->
+            <div
+              class="p-8 rounded-xl bg-[#0D1215] border border-[#1E282E] flex flex-col justify-between hover:border-[#2F3E47] transition-all duration-300"
+            >
+              <div>
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#141C20] border border-[#212E35] flex items-center justify-center text-brand-accent mb-6"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <ellipse
+                      cx="12"
+                      cy="5"
+                      rx="9"
+                      ry="3"
+                      stroke-width="1.75"
+                    ></ellipse>
+                    <path
+                      d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"
+                      stroke-width="1.75"
+                    ></path>
+                    <path
+                      d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"
+                      stroke-width="1.75"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[11px] font-mono text-neutral-400 mb-1">
+                  A reliable foundation
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">
+                  Data wrangling
+                </h3>
+                <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                  Cleaning, transforming, and validating data so every insight
+                  starts on solid ground.
+                </p>
+              </div>
+              <div
+                class="text-xs font-mono text-neutral-400 pt-4 border-t border-[#172024]"
+              >
+                SQL • Python • Pandas • Excel
+              </div>
+            </div>
+            <!-- Pillar 2 -->
+            <div
+              class="p-8 rounded-xl bg-[#0D1215] border border-[#1E282E] flex flex-col justify-between hover:border-[#2F3E47] transition-all duration-300"
+            >
+              <div>
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#141C20] border border-[#212E35] flex items-center justify-center text-brand-accent mb-6"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.75"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[11px] font-mono text-neutral-400 mb-1">
+                  Clarity at a glance
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">
+                  Visual storytelling
+                </h3>
+                <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                  Purposeful dashboards and visualizations that make important
+                  patterns easy to see.
+                </p>
+              </div>
+              <div
+                class="text-xs font-mono text-neutral-400 pt-4 border-t border-[#172024]"
+              >
+                Power BI • Tableau • Matplotlib
+              </div>
+            </div>
+            <!-- Pillar 3 -->
+            <div
+              class="p-8 rounded-xl bg-[#0D1215] border border-[#1E282E] flex flex-col justify-between hover:border-[#2F3E47] transition-all duration-300"
+            >
+              <div>
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#141C20] border border-[#212E35] flex items-center justify-center text-brand-accent mb-6"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.75"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[11px] font-mono text-neutral-400 mb-1">
+                  Beyond the surface
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">
+                  Analytical thinking
+                </h3>
+                <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                  Exploring the why behind the numbers and connecting findings
+                  to business questions.
+                </p>
+              </div>
+              <div
+                class="text-xs font-mono text-neutral-400 pt-4 border-t border-[#172024]"
+              >
+                EDA • Statistics • Segmentation
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Section03Toolkit -->
+      <!-- BEGIN: Section04ACloserLook -->
+      <section
+        class="py-16 sm:py-24 border-b border-[#1A2226]"
+        data-purpose="closer-look-section"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-xs font-mono tracking-widest text-neutral-500 mb-4">
+            04 A CLOSER LOOK
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Column Content -->
+            <div class="lg:col-span-5 space-y-6">
+              <h2
+                class="text-3xl sm:text-4xl font-semibold text-white tracking-tight leading-snug"
+              >
+                Numbers tell stories.<br />
+                <span class="text-neutral-400 font-light"
+                  >Here's one of them.</span
+                >
+              </h2>
+              <p class="text-neutral-400 text-base leading-relaxed">
+                A year of retail revenue, a clear upward trend. Small
+                fluctuations. A bigger picture.
+              </p>
+              <div
+                class="flex items-center gap-2 text-xs font-mono text-neutral-400 pt-2"
+              >
+                <span
+                  class="w-2.5 h-2.5 bg-brand-accent rounded-sm inline-block"
+                ></span>
+                <span class="">Revenue in USD • Illustrative dataset</span>
+              </div>
+            </div>
+            <!-- Right Column Chart Card -->
+            <div
+              class="lg:col-span-7 bg-[#0D1215] border border-[#1E282E] rounded-2xl p-6 sm:p-8"
+              data-purpose="detailed-chart-card"
+            >
+              <!-- Header bar of chart -->
+              <div
+                class="flex items-center justify-between pb-6 border-b border-[#172024] mb-6"
+              >
+                <div>
+                  <div class="text-xs font-mono text-neutral-400 mb-1">
+                    Annual revenue
+                  </div>
+                  <div class="flex items-baseline gap-3">
+                    <span
+                      class="text-3xl sm:text-4xl font-bold text-white tracking-tight"
+                      >$758,000</span
+                    >
+                    <span
+                      class="text-xs font-mono text-brand-accent font-medium"
+                      >↗ 37.0%</span
+                    >
+                  </div>
+                </div>
+                <!-- Year select dropdown -->
+                <div class="relative">
+                  <select
+                    class="bg-[#12181B] border border-[#212E35] text-neutral-300 text-xs rounded-lg px-3 py-1.5 pr-8 appearance-none focus:outline-none focus:border-brand-accent cursor-pointer"
+                  >
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                  </select>
+                  <div
+                    class="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400 text-[10px]"
+                  >
+                    ▼
+                  </div>
+                </div>
+              </div>
+              <!-- Detailed Chart SVG Area -->
+              <div class="w-full h-56 sm:h-64 relative">
+                <svg
+                  class="w-full h-full overflow-visible"
+                  fill="none"
+                  viewBox="0 0 500 200"
+                >
+                  <!-- Horizontal Guide Lines with Labels -->
+                  <g class="text-[10px] font-mono fill-neutral-600">
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="30"
+                      x2="500"
+                      y1="20"
+                      y2="20"
+                    ></line>
+                    <text x="5" y="24">120</text>
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="30"
+                      x2="500"
+                      y1="60"
+                      y2="60"
+                    ></line>
+                    <text x="5" y="64">90</text>
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="30"
+                      x2="500"
+                      y1="100"
+                      y2="100"
+                    ></line>
+                    <text x="5" y="104">60</text>
+                    <line
+                      stroke="#161E23"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="30"
+                      x2="500"
+                      y1="140"
+                      y2="140"
+                    ></line>
+                    <text x="5" y="144">30</text>
+                    <line
+                      stroke="#1F2A30"
+                      stroke-width="1"
+                      x1="30"
+                      x2="500"
+                      y1="180"
+                      y2="180"
+                    ></line>
+                    <text x="12" y="184">0</text>
+                  </g>
+                  <!-- Gradient definitions -->
+                  <defs>
+                    <linearGradient
+                      id="largeChartFill"
+                      x1="0"
+                      x2="0"
+                      y1="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="#34D399"
+                        stop-opacity="0.25"
+                      ></stop>
+                      <stop
+                        offset="100%"
+                        stop-color="#34D399"
+                        stop-opacity="0.0"
+                      ></stop>
+                    </linearGradient>
+                  </defs>
+                  <!-- Area Fill Under Curve -->
+                  <path
+                    d="M 40 145 
+                         C 70 140, 100 145, 120 135 
+                         C 150 120, 170 140, 200 130 
+                         C 230 115, 250 135, 290 115 
+                         C 330 95, 360 135, 410 95 
+                         C 440 75, 460 90, 490 60 
+                         L 490 180 L 40 180 Z"
+                    fill="url(#largeChartFill)"
+                  ></path>
+                  <!-- Main Stroke Line -->
+                  <path
+                    d="M 40 145 
+                         C 70 140, 100 145, 120 135 
+                         C 150 120, 170 140, 200 130 
+                         C 230 115, 250 135, 290 115 
+                         C 330 95, 360 135, 410 95 
+                         C 440 75, 460 90, 490 60"
+                    fill="none"
+                    stroke="#34D399"
+                    stroke-linecap="round"
+                    stroke-width="2.5"
+                  ></path>
+                  <!-- Dynamic Data Point Dot -->
+                  <circle
+                    cx="490"
+                    cy="60"
+                    fill="#34D399"
+                    r="4.5"
+                    stroke="#0D1215"
+                    stroke-width="2.5"
+                  ></circle>
+                  <!-- X Axis Month Labels -->
+                  <g class="text-[11px] font-mono fill-neutral-500">
+                    <text x="40" y="198">Jan</text>
+                    <text x="180" y="198">Apr</text>
+                    <text x="320" y="198">Jul</text>
+                    <text x="460" y="198">Oct</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Section04ACloserLook -->
+      <!-- BEGIN: Section05Connect -->
+      <section class="py-20 sm:py-28" data-purpose="connect-section" id="contact">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-xs font-mono tracking-widest text-neutral-500 mb-4">
+            05 LET'S CONNECT
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12"
+          >
+            <!-- Text Content -->
+            <div class="max-w-2xl">
+              <h2
+                class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-6"
+              >
+                Have a question?<br />
+                Let’s find the
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accentLight"
+                  >answer.</span
+                >
+              </h2>
+              <p
+                class="text-neutral-400 text-base sm:text-lg leading-relaxed max-w-lg mb-8"
+              >
+                Open to data analyst roles, meaningful projects, and
+                conversations about what data can do.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-brand-accent transition-colors"
+                href="mailto:contact@shawon.example"
+              >
+                <span class="">Start a conversation</span>
+                <span class="text-base">↗</span>
+              </a>
+            </div>
+            <!-- Circular Floating Action Button -->
+            <a
+              aria-label="Contact Rakibul Islam Shawon"
+              class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#A7F3D0] hover:bg-[#6EE7B7] text-[#062419] flex items-center justify-center text-3xl font-light hover:scale-105 transition-all duration-300 shadow-lg glow-mint flex-shrink-0"
+              href="mailto:contact@shawon.example"
+            >
+              ↗
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- END: Section05Connect -->
+    </main>
+    <!-- BEGIN: SiteFooter -->
+    <footer
+      class="border-t border-[#182126] py-10 bg-[#06080A]"
+      data-purpose="site-footer"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-6"
+      >
+        <!-- Left Logo -->
+        <a
+          class="font-medium text-base text-neutral-300 hover:text-white transition-colors"
+          href="#"
+        >
+          shawon.
+        </a>
+        <!-- Center Copyright -->
+        <div class="">© 2026 Rakibul Islam Shawon</div>
+        <!-- Right Back to Top -->
+        <div class="flex items-center gap-4">
+          <a
+            class="hover:text-neutral-300 transition-colors flex items-center gap-1 font-mono text-[11px]"
+            href="#hero"
+          >
+            <span class="">Back to top</span>
+            <span class="">↗</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: SiteFooter -->
+    <script data-purpose="interactive-filters">
+      // Subtle interactivity for project filter tabs
+      document
+        .querySelectorAll('[data-purpose="selected-work-section"] button')
+        .forEach((button) => {
+          button.addEventListener("click", function () {
+            document
+              .querySelectorAll('[data-purpose="selected-work-section"] button')
+              .forEach((btn) => {
+                btn.classList.remove(
+                  "bg-[#131B1E]",
+                  "border",
+                  "border-[#232F35]",
+                  "text-white",
+                );
+                btn.classList.add("text-neutral-400");
+              });
+            this.classList.add(
+              "bg-[#131B1E]",
+              "border",
+              "border-[#232F35]",
+              "text-white",
+            );
+            this.classList.remove("text-neutral-400");
+          });
+        });
+    </script>
+    <script data-purpose="mobile-navigation">
+      const menuToggle = document.querySelector(
+        '[data-purpose="mobile-menu-toggle"]',
+      );
+      const mobileNav = document.querySelector('[data-purpose="mobile-nav"]');
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        menuToggle.setAttribute(
+          "aria-label",
+          isExpanded ? "Open navigation menu" : "Close navigation menu",
+        );
+        menuToggle.querySelector("span").textContent = isExpanded ? "☰" : "×";
+        mobileNav.classList.toggle("hidden", isExpanded);
+      });
+
+      mobileNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          menuToggle.querySelector("span").textContent = "☰";
+        });
+      });
+    </script>
   </body>
 </html>
